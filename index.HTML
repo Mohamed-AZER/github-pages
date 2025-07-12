@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Marketing Excellence - Free eBook</title>
+    <style>
+        :root {
+            --primary: #6C5CE7;
+            --secondary: #FD79A8;
+            --dark: #2D3436;
+            --light: #F5F6FA;
+            --accent: #00B894;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        body {
+            background-color: #F9F9F9;
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+        
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(108, 92, 231, 0.4);
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .benefit-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .testimonials {
+            margin: 80px 0;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text:before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .author-title {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .faq {
+            margin: 80px 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background: var(--light);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer.show {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content, .hero-image {
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Affiliate Marketing Excellence</div>
+        </header>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Master Affiliate Marketing With Our <span style="color: var(--accent);">Free</span> Expert Guide</h1>
+                <p class="subtitle">Discover the proven strategies top affiliates use to generate passive income and build sustainable online businesses</p>
+                <button class="cta-button"><a href="https://appslocked.com/cl/i/ndk71k">Get My Free eBook Now</a></button>
+            </div>
+            <div class="hero-image">
+                <img src="ebook(1).png" alt="Affiliate Marketing Excellence eBook Cover">
+            </div>
+        </section>
+        
+        <section class="benefits">
+            <div class="benefit-card">
+                <div class="benefit-icon">🚀</div>
+                <h3>Proven Strategies</h3>
+                <p>Learn battle-tested methods that actually work in today's competitive affiliate landscape, not just theory.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">💰</div>
+                <h3>Income Boosters</h3>
+                <p>Discover little-known techniques to increase your conversion rates and maximize commissions.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🛠️</div>
+                <h3>Practical Tools</h3>
+                <p>Get our exclusive list of must-have tools and resources with special affiliate discounts.</p>
+            </div>
+        </section>
+        
+        <section class="testimonials">
+            <h2 style="text-align: center;">What Our Readers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        This guide transformed my approach to affiliate marketing. I went from making occasional sales to consistent $3k+ months within 60 days.
+                    </div>
+                    <div class="testimonial-author">Sarah K.</div>
+                    <div class="author-title">Former Teacher, Now Full-Time Affiliate</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        The traffic generation section alone was worth 10x the price. Finally a guide that cuts through the fluff and delivers real value.
+                    </div>
+                    <div class="testimonial-author">Michael T.</div>
+                    <div class="author-title">Digital Marketing Consultant</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        I've bought countless courses before, but this free eBook contained more practical advice than all of them combined. Game changer!
+                    </div>
+                    <div class="testimonial-author">Priya M.</div>
+                    <div class="author-title">Blogger & Affiliate Marketer</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="faq">
+            <h2 style="text-align: center;">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Is this really free? What's the catch?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, 100% free. We believe in providing massive value first. The "catch" is that we may occasionally email you about premium content, but you can unsubscribe anytime.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    What will I learn from this eBook?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    You'll learn: How to choose profitable niches, advanced traffic generation methods, conversion optimization techniques, email marketing for affiliates, and how to scale your campaigns.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Do I need experience to benefit from this?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Not at all! We've structured the guide with complete beginners in mind, while including advanced strategies that even experienced affiliates will find valuable.
+                </div>
+            </div>
+        </section>
+        
+        <section style="text-align: center; margin: 80px 0;">
+            <h2 style="margin-bottom: 30px;">Ready to Transform Your Affiliate Business?</h2>
+            <button class="cta-button"><a href="https://appslocked.com/cl/i/ndk71k">Download Your Free eBook Now</a></button>
+            <p style="margin-top: 20px; font-size: 0.9rem;">Limited time offer. Download now before this promotion ends.</p>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <p>© 2023 Affiliate Marketing Excellence. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // FAQ Functionality
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const plusMinus = element.querySelector('span');
+            
+            answer.classList.toggle('show');
+            
+            if (answer.classList.contains('show')) {
+                plusMinus.textContent = '-';
+            } else {
+                plusMinus.textContent = '+';
+            }
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // CTA Button Tracking
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Replace with your actual conversion tracking code
+                console.log('CTA clicked - implement tracking here');
+                // Example: window.location.href = 'your-download-link';
+            });
+        });
+    </script>
+</body>
+</html>
