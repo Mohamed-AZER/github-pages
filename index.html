@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Marketing Excellence - Unlock Your Free eBook</title>
+    <style>
+        :root {
+            --primary: #6C5CE7;
+            --secondary: #FD79A8;
+            --accent: #00B894;
+            --dark: #2D3436;
+            --light: #F5F6FA;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        body {
+            background-color: #F9F9F9;
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        /* Content Locker Styles */
+        .content-locker {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 40px auto;
+            border: 1px dashed var(--primary);
+            max-width: 800px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .locker-header {
+            margin-bottom: 20px;
+        }
+        
+        .locker-header h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .lock-steps {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .step {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 220px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            background: var(--accent);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .step.completed {
+            border: 2px solid var(--accent);
+        }
+        
+        .step.completed .step-icon {
+            color: var(--accent);
+        }
+        
+        .step-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+        
+        .email-form {
+            margin: 20px auto;
+            max-width: 500px;
+        }
+        
+        .email-form input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .share-button {
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .facebook-btn {
+            background: #4267B2;
+            color: white;
+        }
+        
+        .twitter-btn {
+            background: #1DA1F2;
+            color: white;
+        }
+        
+        .linkedin-btn {
+            background: #0077B5;
+            color: white;
+        }
+        
+        .share-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+        
+        .locked-content {
+            display: none;
+            margin-top: 30px;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 184, 148, 0.4);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .step {
+                width: 100%;
+            }
+            
+            .content-locker {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Affiliate Marketing Excellence</div>
+            <p>Claim your free eBook by completing two simple steps</p>
+        </header>
+        
+        <div class="content-locker">
+            <div class="locker-header">
+                <h2>🔒 Unlock Your Free eBook</h2>
+                <p>Complete these 2 steps to get instant access:</p>
+            </div>
+            
+            <div class="lock-steps">
+                <div class="step" id="step1">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📧</div>
+                    <h3>Enter Your Email</h3>
+                    <p>We'll send your download link here</p>
+                </div>
+                
+                <div class="step" id="step2">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">📢</div>
+                    <h3>Share With Friends</h3>
+                    <p>Help spread the knowledge</p>
+                </div>
+            </div>
+            
+            <div class="email-form" id="emailForm">
+                <input type="email" id="userEmail" placeholder="Enter your best email address" required>
+                <button class="cta-button" onclick="submitEmail()">Submit & Continue</button>
+            </div>
+            
+            <div class="share-buttons" id="shareButtons" style="display:none;">
+                <button class="share-button facebook-btn" onclick="shareOnSocial('facebook')">
+                    <span>Share on Facebook</span>
+                </button>
+                <button class="share-button twitter-btn" onclick="shareOnSocial('twitter')">
+                    <span>Share on Twitter</span>
+                </button>
+                <button class="share-button linkedin-btn" onclick="shareOnSocial('linkedin')">
+                    <span>Share on LinkedIn</span>
+                </button>
+            </div>
+            
+            <div class="locked-content" id="lockedContent">
+                <h3>🎉 Congratulations!</h3>
+                <p>Your eBook is ready to download. Thank you for sharing!</p>
+                <a href="ebook(1).pdf" download class="download-btn">Download Now (PDF, 5.2MB)</a>
+                <p style="margin-top: 20px; font-size: 0.9rem;">Can't download? <a href="#" style="color: var(--primary);">Click here</a> to get the link via email.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Track completion status
+        const unlockStatus = {
+            emailSubmitted: false,
+            shared: false
+        };
+        
+        // Email submission
+        function submitEmail() {
+            const email = document.getElementById('userEmail').value;
+            
+            // Validate email
+            if (!email || !email.includes('@')) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Here you would typically send the email to your server/Mailchimp
+            console.log('Email submitted:', email);
+            
+            // Update UI
+            document.getElementById('step1').classList.add('completed');
+            document.getElementById('emailForm').style.display = 'none';
+            document.getElementById('shareButtons').style.display = 'flex';
+            
+            unlockStatus.emailSubmitted = true;
+        }
+        
+        // Social sharing
+        function shareOnSocial(platform) {
+            let url;
+            const shareText = "Just claimed my free 'Affiliate Marketing Excellence' eBook! Download yours here: ";
+            const shareUrl = window.location.href;
+            
+            switch(platform) {
+                case 'facebook':
+                    url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
+                    break;
+                case 'twitter':
+                    url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText + shareUrl)}`;
+                    break;
+                case 'linkedin':
+                    url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
+                    break;
+                default:
+                    return;
+            }
+            
+            window.open(url, '_blank', 'width=600,height=400');
+            
+            // In a real implementation, you'd verify the share via API
+            // For demo, we'll assume share was successful
+            setTimeout(() => {
+                completeUnlockProcess();
+            }, 2000);
+        }
+        
+        // Complete the unlock process
+        function completeUnlockProcess() {
+            document.getElementById('step2').classList.add('completed');
+            document.getElementById('shareButtons').style.display = 'none';
+            document.getElementById('lockedContent').style.display = 'block';
+            
+            // Scroll to download button
+            document.getElementById('lockedContent').scrollIntoView({
+                behavior: 'smooth'
+            });
+            
+            // Here you would typically:
+            // 1. Send download link to user's email
+            // 2. Track conversion in analytics
+            // 3. Add user to your email sequence
+            console.log('User unlocked content!');
+        }
+        
+        // Bonus: Track if user tries to bypass
+        document.addEventListener('DOMContentLoaded', () => {
+            window.addEventListener('beforeunload', function(e) {
+                if (!unlockStatus.emailSubmitted) {
+                    // Notify if they try to leave without submitting
+                    const confirmationMessage = 'Wait! Your free eBook is just 2 steps away.';
+                    (e || window.event).returnValue = confirmationMessage;
+                    return confirmationMessage;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
